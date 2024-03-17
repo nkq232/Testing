@@ -1,10 +1,9 @@
 pipeline {
-    agent { 
-        clouds { 
-            docker {
-                label 'docker-agent-alpine'
-            }
+    agent {
+        docker {
+            label 'docker-agent-alpine'
         }
+        
       }
     triggers {
         pollSCM '* * * * *'
