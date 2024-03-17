@@ -1,10 +1,7 @@
 pipeline {
     agent {
-        docker {
-            label 'docker-agent-alpine'
-        }
-        
-      }
+        docker { image 'jenkins/agent:alpine-jdk11' }
+    }
     triggers {
         pollSCM '* * * * *'
     }
