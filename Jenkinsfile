@@ -13,9 +13,9 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing build stuff.."
-                '''
                 javac Main.java
                 java Main
+                '''
             }
         }
         stage('Test') {
